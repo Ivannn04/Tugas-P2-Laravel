@@ -9,7 +9,13 @@ class Author extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'bio'];
+    protected $table = 'authors';
+
+    protected $fillable = [
+        'name',
+        'photo',
+        'bio',
+    ];
 
     public function books()
     {
